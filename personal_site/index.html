@@ -4,10 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Персональна сторінка - Артем Бузницький</title>
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Internal CSS -->
+    <style>
+        header {
+            background-color: #2ecc71;
+            height: 150px;
+        }
+        section {
+            background-color: #f39c12;
+            color: white;
+            width: 90%;             
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-    <header>
+  <!-- Inline CSS -->
+    <header style="text-align: center; color: white;">
         <h1>Вітаю на моїй персональній сторінці!</h1>
         <nav>
             <ul>
@@ -16,14 +31,17 @@
                 <li><a href="contacts.html">Контакти</a></li>
             </ul>
         </nav>
+        <hr class="styled-hr-thick-dots">
     </header>
 
     <section>
         <h2>Ласкаво просимо!</h2>
         <p>Мене звати Артем Бузницький. Це моя персональна сторінка, де ви можете дізнатися більше про мене.</p>
+        <hr class="styled-hr">
     </section>
 
     <footer>
+        <hr class="styled-hr-dotted">
         <p>&copy; 2024 Артем Бузницький</p>
     </footer>
 </body>
