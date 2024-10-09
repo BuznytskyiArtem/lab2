@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Три бокси</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column; /* Встановлюємо вертикальне розташування */
+            align-items: center; /* Вирівнюємо бокси по центру */
+        }
+        .box {
+            width: 200px; /* Фіксована ширина боксу */
+            height: 200px; /* Висота боксу */
+            display: flex;
+            flex-direction: column; /* Вертикальне розташування тексту */
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: white;
+            margin: 10px 0; /* Відступи між боксами */
+        }
+        .box1 {
+            background-color: #00CCCC; /* Колір для першого боксу */
+        }
+        .box2 {
+            background-color: #A0A0A0; /* Колір для другого боксу */
+        }
+        .box3 {
+            background-color: #FF3F85; /* Колір для третього боксу */
+        }
+        .number {
+            font-size: 32px; /* Розмір шрифту для номера */
+            font-weight: bold; /* Жирний шрифт для номера */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">
+            <div class="number">#1</div>
+            <div>I am Artem.</div>
+            <div>I love coding.</div>
+        </div>
+        <div class="box box2">
+            <div class="number">#2</div>
+        </div>
+        <div class="box box3">
+            <div class="number">#3</div>
+        </div>
+    </div>
+</body>
+</html>
