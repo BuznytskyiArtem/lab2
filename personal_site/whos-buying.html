@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хто купує каву?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Хто купує каву?</h1>
+    <label for="names">Введіть імена через кому:</label>
+    <input type="text" id="names" required><br><br>
+
+    <button onclick="whosBuying()">Дізнатися</button>
+
+    <p id="result"></p>
+
+    <script>
+        function whosBuying() {
+            var names = document.getElementById("names").value.split(",");
+            var resultElement = document.getElementById("result");
+
+            names = names.map(name => name.trim()).filter(name => name);
+
+            if (names.length > 1) {
+                var randomIndex = Math.floor(Math.random() * names.length);
+                resultElement.textContent = names[randomIndex] + " купує каву для всіх!";
+            } else {
+                resultElement.textContent = "Будь ласка, введіть більше ніж одне ім'я!";
+            }
+        }
+    </script>
+
+    <nav>
+        <ul>
+            <li><a href="love-calculator.html">Love Calculator</a></li>
+            <li><a href="bmi-calculator.html">BMI Calculator</a></li>
+            <li><a href="leap-year.html">Leap Year Checker</a></li>
+            <li><a href="whos-buying.html">Хто купує каву?</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
