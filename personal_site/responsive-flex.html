@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Portal - We Are Europe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-image: url('images/background-image.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        header button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 50px;
+            text-align: center;
+        }
+
+        main h2 {
+            margin-bottom: 20px;
+        }
+
+        /* Flexbox Section */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .flex-item {
+            width: 45%;
+            margin: 10px 0;
+        }
+
+        .flex-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .flex-item {
+                width: 100%;
+            }
+
+            header {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>We Are Europe</h1>
+        <p>Experience Europe through our stories.</p>
+        <button>Get Started</button>
+
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+      <nav>
+        <ul>
+          <li><a href="responsive-flex.html">Головна</a></li>
+          <li><a href="parallax.html">Parallax Сторінка</a></li>
+        </ul>
+      </nav>
+        <h2>Experience Europe through our stories</h2>
+        <p>Explore the diversity of Europe, from the majestic mountains to the vibrant cities. Discover the places and the people that make Europe unique.</p>
+
+        <!-- Flexbox Container for About and Take Action -->
+        <div class="flex-container">
+            <div class="flex-item">
+                <img src="images/about-image.jpg" alt="About Europe">
+                <h3>About</h3>
+                <p>Discover the rich history and culture that defines Europe.</p>
+            </div>
+            <div class="flex-item">
+                <img src="images/action-image.jpg" alt="Take Action">
+                <h3>Take Action</h3>
+                <p>Learn how you can explore and contribute to preserving Europe’s natural beauty.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>2024 © Travel Portal, All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

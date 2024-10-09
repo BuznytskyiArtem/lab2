@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+        }
+
+        /* Parallax section */
+        .parallax {
+            /* Background image */
+            background-image: url('images/background-image.jpg');
+            height: 500px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Regular content sections */
+        .content {
+            padding: 50px;
+            text-align: center;
+            background-color: white;
+        }
+
+        h1, p {
+            margin: 0 0 20px;
+        }
+
+        /* Responsive design - disable parallax on mobile and tablet devices */
+        @media (max-width: 1024px) {
+            .parallax {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- First Parallax Section -->
+    <div class="parallax"></div>
+
+    <!-- Regular Content Section -->
+    <div class="content">
+        <h1>Welcome to the Parallax Page</h1>
+        <p>This is a simple example of a parallax effect where the background image stays fixed during scroll.</p>
+        <nav>
+          <ul>
+            <li><a href="responsive-flex.html">Головна</a></li>
+            <li><a href="parallax.html">Parallax Сторінка</a></li>
+          </ul>
+        </nav>
+
+    </div>
+
+    <!-- Second Parallax Section -->
+    <div class="parallax"></div>
+
+    <!-- Another Regular Content Section -->
+    <div class="content">
+        <h1>Another Content Section</h1>
+        <p>The parallax effect can be a great way to create an interactive and engaging experience for users.</p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="content">
+        <p>2024 © Travel Portal, All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
