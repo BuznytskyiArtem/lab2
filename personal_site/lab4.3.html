@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Три бокси</title>
+    <style>
+        .container {
+            position: relative; /* Додаємо позиціювання для контейнера */
+            width: 700px; /* Ширина контейнера */
+            height: 680px; /* Висота контейнера */
+            margin: 20px auto; /* Центруємо контейнер */
+        }
+        .box {
+            width: 200px; /* Фіксована ширина боксу */
+            height: 200px; /* Висота боксу */
+            display: flex;
+            flex-direction: column; /* Вертикальне розташування тексту */
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: white;
+            margin: 10px; /* Відступи між боксами */
+        }
+        .box1 {
+            background-color: #00CCCC; /* Колір для першого боксу */
+            border: 10px solid black; /* Границя 10px */
+            padding: 10px; /* Відступи всередині 10px */
+            position: absolute; /* Абсолютне позиціювання */
+            top: 0; /* Відступ зверху */
+            left: 0; /* Відступ зліва */
+        }
+        .box2 {
+            background-color: #A0A0A0; /* Колір для другого боксу */
+            border: 20px solid black; /* Границя 20px */
+            position: absolute; /* Абсолютне позиціювання */
+            top: 210px; /* Відступ зверху від першого боксу */
+            left: 50%; /* Центруємо по горизонталі */
+            transform: translateX(-50%); /* Вирівнюємо по центру */
+        }
+        .box3 {
+            background-color: #FF3F85; /* Колір для третього боксу */
+            border: 10px solid black; /* Границя 10px */
+            position: absolute; /* Абсолютне позиціювання */
+            bottom: 0; /* Відступ знизу */
+            right: 0; /* Відступ справа */
+        }
+        .number {
+            font-size: 32px; /* Розмір шрифту для номера */
+            font-weight: bold; /* Жирний шрифт для номера */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box3">
+            <div class="number">#1</div>
+        </div>
+        <div class="box box2">
+            <div class="number">#2</div>
+        </div>
+        <div class="box box1">
+            <div class="number">#3</div>
+            <div>I am Artem.</div>
+            <div>I love coding.</div>
+        </div>
+    </div>
+</body>
+</html>

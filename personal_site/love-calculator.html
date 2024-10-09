@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Калькулятор Кохання</h1>
+    <p>Введіть імена двох людей:</p>
+
+    <label for="name1">Ім'я 1:</label>
+    <input type="text" id="name1"><br><br>
+
+    <label for="name2">Ім'я 2:</label>
+    <input type="text" id="name2"><br><br>
+
+    <button onclick="calculateLove()">Розрахувати сумісність</button>
+
+    <script>
+        function calculateLove() {
+            var name1 = document.getElementById("name1").value;
+            var name2 = document.getElementById("name2").value;
+
+            if (name1 && name2) {
+                var loveScore = Math.floor(Math.random() * 100) + 1;
+                alert(name1 + " і " + name2 + " мають рівень кохання: " + loveScore + "%");
+            } else {
+                alert("Будь ласка, введіть обидва імена!");
+            }
+        }
+    </script>
+
+    <nav>
+        <ul>
+            <li><a href="love-calculator.html">Love Calculator</a></li>
+            <li><a href="bmi-calculator.html">BMI Calculator</a></li>
+            <li><a href="leap-year.html">Leap Year Checker</a></li>
+            <li><a href="whos-buying.html">Хто купує каву?</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перевірка Високосного Року</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Перевірка Високосного Року</h1>
+    <label for="year">Введіть рік:</label>
+    <input type="number" id="year" min="1" required><br><br>
+
+    <button onclick="checkLeapYear()">Перевірити</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkLeapYear() {
+            var year = parseInt(document.getElementById("year").value);
+            var resultElement = document.getElementById("result");
+
+            if (isNaN(year)) {
+                resultElement.textContent = "Будь ласка, введіть коректний рік!";
+                return;
+            }
+
+            if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+                resultElement.textContent = year + " рік є високосним.";
+            } else {
+                resultElement.textContent = year + " рік не є високосним.";
+            }
+        }
+    </script>
+
+    <nav>
+        <ul>
+            <li><a href="love-calculator.html">Love Calculator</a></li>
+            <li><a href="bmi-calculator.html">BMI Calculator</a></li>
+            <li><a href="leap-year.html">Leap Year Checker</a></li>
+            <li><a href="whos-buying.html">Хто купує каву?</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гра в Кості</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .game-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+
+        .dice {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            display: inline-block;
+            background-color: #ffeb3b;
+            border-radius: 5px;
+            line-height: 100px;
+            font-size: 48px;
+            color: #333;
+        }
+
+        .result {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .winner {
+            color: #ff5722;
+            font-size: 28px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Гра в Кості</h1>
+    <div class="game-container">
+        <div>
+            <div id="player1-dice" class="dice">0</div>
+            <div id="player2-dice" class="dice">0</div>
+        </div>
+        <div>
+            <button id="roll-dice-btn">Кинути Кості</button>
+        </div>
+        <div id="result" class="result"></div>
+        <div id="winner" class="winner"></div>
+    </div>
+
+    <script>
+        // Функція для генерації випадкового числа від 1 до 6
+        function rollDice() {
+            return Math.floor(Math.random() * 6) + 1;
+        }
+
+        // Обробник події для кнопки "Кинути Кості"
+        document.getElementById("roll-dice-btn").addEventListener("click", function() {
+            // Кидаємо кості для гравця 1 і гравця 2
+            let player1Roll = rollDice();
+            let player2Roll = rollDice();
+
+            // Виводимо результат на екран
+            document.getElementById("player1-dice").textContent = player1Roll;
+            document.getElementById("player2-dice").textContent = player2Roll;
+
+            // Визначаємо переможця
+            let resultText = "";
+            let winnerText = "";
+
+            if (player1Roll > player2Roll) {
+                resultText = "Гравець 1 виграв!";
+                winnerText = "Переможець: Гравець 1";
+            } else if (player2Roll > player1Roll) {
+                resultText = "Гравець 2 виграв!";
+                winnerText = "Переможець: Гравець 2";
+            } else {
+                resultText = "Нічия!";
+                winnerText = "Ніхто не виграв!";
+            }
+
+            // Виводимо результат гри
+            document.getElementById("result").textContent = resultText;
+            document.getElementById("winner").textContent = winnerText;
+        });
+    </script>
+</body>
+</html>
