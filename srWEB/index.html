@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фільми за жанрами</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>База даних фільмів</h1>
+        <nav>
+            <ul>
+                <li onclick="showFavorites()">Обрані</li>
+                <li onclick="showWatchedForm()">Облік переглянутих</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside>
+            <h2>Жанри</h2>
+            <ul id="genres">
+                <li onclick="showMovies('action')">Бойовики</li>
+                <li onclick="showMovies('thriller')">Трилери</li>
+                <li onclick="showMovies('western')">Вестерни</li>
+                <li onclick="showMovies('comedy')">Комедії</li>
+                <li onclick="showMovies('drama')">Драми</li>
+            </ul>
+        </aside>
+
+        <main>
+            <section id="movies-list">
+                <h2>Фільми</h2>
+                <p>Виберіть жанр, щоб переглянути фільми.</p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>Проектування WEB-додатків</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
